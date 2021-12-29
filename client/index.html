@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" /> 
+    <script src="https://unpkg.com/leaflet@1.7.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>
+    <title>Geo Document</title>
+    <link rel="stylesheet" href="Sentiments.css" />
+    <!-- <link rel="stylesheet" href="leaflet-search.css" /> -->
+</head>
+<body>
+    <div id="map"></div>
+    <!-- <script src="leaflet-search.js"></script> -->
+    <!-- <script src="rostock_Street.js"></script> -->
+    <script src="Sentiments.js"></script>
+    
+    <script>
+      
+     
+    </script>
+
+    <script>//osm layer
+      var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+     });
+   
+     
+
+      
+      
+     // water color 
+     var watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+       attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+       subdomains: 'abcd',
+       minZoom: 1,
+       maxZoom: 16,
+       ext: 'jpg'
+     });
+     
+     
+     // dark map 
+     var dark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+       subdomains: 'abcd',
+       maxZoom: 19
+     });
+     
+     
+     // google street 
+     googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+       maxZoom: 20,
+       subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+     });
+     
+     
+     //google satellite
+     googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+       maxZoom: 20,
+       subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+     });
+     
+     
+     
+     
+     var baseMaps = {
+       "OSM": osm,
+       "Water color map": watercolor,
+       'Dark': dark,
+       'Google Street': googleStreets,
+       "Google Satellite": googleSat,
+     };
+     
+     
+     L.control.layers(baseMaps).addTo(map);
+
+     
+    
+     </script>
+   
+</body>
+</html>
