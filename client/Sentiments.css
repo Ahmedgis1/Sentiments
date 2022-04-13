@@ -1,32 +1,23 @@
+.parent
+{
+    width:100%;
+}
+.left
+{
+    float:left;
+    width:20%;
+    box-sizing:border-box;
+    padding:5px;
+    border:#CCC solid 1px;
+    min-height:200px;
+}
 
-
-body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  #map{
-    width: 100%;
-    height: 100vh;
-    
-  }
-  
-  .star{
-    font-size: 1.5em;
-  } 
-  
-  .icon1-button {
-    background-image: url('images/kiss.png');
-  }
-  .icon2-button {
-    background-image: url('images/anger.png');
-  }
-  .icon3-button {
-    background-image: url('images/garbage.png');
-  }
-  .icon4-button {
-    background-image: url('images/hand.png');
-  }
-  .icon5-button {
-    background-image: url('images/save.png');
-  }
+.right
+{
+    float:left;
+    width:80%;
+    box-sizing:border-box;
+    padding:5px;
+    border:#CCC solid 1px;
+    min-height:500px;
+}

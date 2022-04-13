@@ -1,0 +1,23 @@
+{ 
+    "Students": [
+        {
+            "student-name":"n1",
+            "study-field":"f1",
+            "university":"u1"
+        },
+        {
+            "student-name":"n2",
+            "study-field":"f2",
+            "university":"u2"
+        },
+        {
+            "student-name":"n3",
+            "study-field":"f3",
+            "university":"u3"
+        }
+
+
+    ]
+
+
+}

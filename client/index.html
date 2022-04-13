@@ -8,22 +8,128 @@
     <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" /> 
     <script src="https://unpkg.com/leaflet@1.7.0/dist/leaflet.js"></script>
     <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/hayeswise/Leaflet.PointInPolygon@v1.0.0/wise-leaflet-pip.js"></script>
     <title>Geo Document</title>
     <link rel="stylesheet" href="Sentiments.css" />
+     <!-- markercluster  -->
+     <link rel="stylesheet" href="./dist/MarkerCluster.css" />
+     <link rel="stylesheet" href="./dist/MarkerCluster.Default.css" />
     <!-- <link rel="stylesheet" href="leaflet-search.css" /> -->
 </head>
 <body>
-    <div id="map"></div>
+  <div class="parent">
+    
+    
+    <div class="left">
+
+      <br>    </br>
+      <br>    </br>
+      
+   
+        <font size="4"  color="black">
+          Navigate
+        </font>
+       
+
+        <hr style="border-inline:#CCC solid 1px; width: 100%" />
+       
+      
+      <a href="cluster.html">  Clustering</a>  <br>    </br>
+      <a href="heatmap.html">  Heatmap</a> <br>    </br>
+      <a href="charts.html">  Charts</a>
+      <br>    </br>
+      
+      <hr style="border-top:#CCC solid 1px; width:100%" />
+      <br>    </br>
+      <br>    </br>
+
+      <font size="4"  color="black">
+        Statistics
+      </font>
+     
+      <hr style="border-inline:#CCC solid 1px; width: 100%" />
+     
+      <p>
+        
+        Total Number of Entries: 
+        <font size="3" face="verdana" color="blue">
+          <span id="total" ></span color="green"><style></style><br>    </br>
+        </font>
+        
+        Positive Entries: <font size="3" face="verdana" color="green">
+          <span id="positive"></style></span><br>    </br>
+        </font>
+        
+        Negative Entries: 
+        <font size="3" face="verdana" color="red">
+          <span id="negative"></span>
+        </font>
+        
+      </p>
+      <div id='PN'style="height:500px;"><!-- Plotly chart will be drawn inside this DIV -->
+      </div>
+      <hr style="border-top:#CCC solid 1px; width:100%" />
+        <!-- <canvas id="myChart" width="0.1" height="0.01"></canvas> -->
+        <!-- <div id='myDiv'Plotly chart will be drawn inside this DIV -->
+          <div id='pn1'><!-- Plotly chart will be drawn inside this DIV --></div>
+        
+        
+       
+        
+    </div>
+
+    <div class="right">
+        
+        <!--your code starts-->
+        
+
+
+<br> For expressing your Feelings please click on a postion in the map. </br>
+
+<div id="map" style="height:900px;"></div>
+  
+
+
+
+
+
+  
+
+
+
+
+
+</div>
+
+  <!-- <p> <b> Address </b></p>       -->
+        
+       <!-- your code ends-->
+        
+    </div>
+ 
+
+
+
+    
+    
+
+    <!-- markercluster  -->
+    <script src="./dist/leaflet.markercluster.js"></script>
     <!-- <script src="leaflet-search.js"></script> -->
     <!-- <script src="rostock_Street.js"></script> -->
+    <script src="ortteile.js"></script>
     <script src="Sentiments.js"></script>
     
     <script>
       
      
-    </script>
+   
 
-    <script>//osm layer
+    
+    //osm layer
       var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
      });
@@ -78,6 +184,8 @@
      L.control.layers(baseMaps).addTo(map);
 
      
+
+
     
      </script>
    

@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"place_name": "Department of Computer science"},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.106697559356688,
+          54.0776333127201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"place_name": "Department of Physics"},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.107899188995361,
+          54.077217874627536
+        ]
+      }
+    }
+  ]
+}
